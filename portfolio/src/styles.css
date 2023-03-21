@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root{
+    @apply bg-base-color flex flex-col text-primary-ligth-txt;
+}
+
+.navbar-links{
+    @apply gap-10;
+}
+
+.navbar-links .navbar-link{
+    @apply text-base font-bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-links .navbar-link:hover{
+    @apply text-[white] font-normal ;
+}
+
