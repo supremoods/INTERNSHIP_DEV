@@ -5,47 +5,68 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>John Lappay - Software Developer</title>
+   <title>John Lappay - Full Stack Developer</title>
    <link rel="stylesheet" href="dist/css/styles.css">
    <link rel="stylesheet" href="dist/css/main.css">
+   <link rel="stylesheet" href="dist/css/navbar-foot.css">
+   <link rel="icon" href="assets/icons/logo.ico">
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
    <div id="root">
       <!-- navbar component -->
-      <div class="navbar-container fixed flex h-[70px] w-full items-center px-[15em] pt-[70px]">
-         <div class="navbar-wrapper flex justify-center items-center w-full"> 
-            <div class="navbar-logo flex-grow">
-               <!-- logo img  -->
-               <div class="logo">
-                  <img src="assets/icons/logo.ico" alt="logo" class="logo-img">
-               </div>
-            </div>
-            <div class="navbar-links flex">
-               <!-- nav links -->
-               <div class="navbar-link">
-                  <a href="index.html">About</a>
-               </div>
-               <div class="navbar-link">
-                  <a href="portfolio.html">Projects</a>
-               </div>
-               <div class="navbar-link">
-                  <a href="contact.html">Contact</a>
-               </div>
-               <!-- social media links -->
-               <div class="soc-med-links">
-                  <div class="soc-med-link">
-                     <a href="https://www.instagram.com/johnlappay/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+      <div class="navbar-container fixed flex h-[70px] w-full justify-center items-center pt-[70px] z-10 ">
+         <div class="navbar-wrapper flex justify-center items-center w-full">
+            <div class="navbar flex justify-center items-center w-3/5">
+               <div class="navbar-logo flex-grow">
+                  <!-- logo img  -->
+                  <div class="logo">
+                     <img src="assets/icons/logo.ico" alt="logo" class="logo-img">
                   </div>
-                  <div class="soc-med-link">
-                     <a href="https://www.facebook.com/johnlappay" target="_blank"><i class='bx bxl-facebook'></i></a>
+               </div>
+               <div class="menu-btn-container hidden">
+                  <div class="menu-btn hover:text-secondary-txt">
+                     <i class='bx bx-menu'></i>
                   </div>
-                  <div class="soc-med-link">
-                     <a href="https://www.linkedin.com/in/johnlappay/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+               </div>
+               <div class="navbar-links flex">
+                  <!-- nav links -->
+                  <div class="back-btn-container hidden">
+                     <button class="back-btn hover:text-secondary-txt">
+                        <i class='bx bx-chevron-right'></i>
+                     </button>
                   </div>
-                  <div class="soc-med-link">
-                     <a href="https://www.github.com/johnlappay" target="_blank"><i class='bx bxl-github'></i></a>
+
+                  <div class="cont flex gap-5">
+                     <div class="navbar-link">
+                        <a href="about.html">About</a>
+                     </div>
+                     <div class="navbar-link">
+                        <a href="projects.html">Projects</a>
+                     </div>
+                     <div class="navbar-link">
+                        <a href="contact.html">Contact</a>
+                     </div>
+                  </div>
+ 
+                  <!-- social media links -->
+                  <div class="soc-med-links">
+                     <div class="soc-med-link">
+                        <a href="https://www.instagram.com/johnlappay/" target="_blank"><i
+                              class='bx bxl-instagram-alt'></i></a>
+                     </div>
+                     <div class="soc-med-link">
+                        <a href="https://www.facebook.com/johnlappay" target="_blank"><i
+                              class='bx bxl-facebook'></i></a>
+                     </div>
+                     <div class="soc-med-link">
+                        <a href="https://www.linkedin.com/in/johnlappay/" target="_blank"><i
+                              class='bx bxl-linkedin'></i></a>
+                     </div>
+                     <div class="soc-med-link">
+                        <a href="https://www.github.com/johnlappay" target="_blank"><i class='bx bxl-github'></i></a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -53,37 +74,154 @@
       </div>
 
       <!-- cover component -->
-      <div class="cover-container pt-[70px]">
-         <div class="cover-wrapper">
-            <div class="header-title">
-               <h1><span>{</span>Full Stack<span>}</span><span>Developer</span></h1>
-               <h1>JOHN LAPPAY</h1>
+      <div class="cover-container pt-[70px] h-full flex justify-center">
+         <div class="cover-wrapper flex relative w-3/5">
+            <div class="title-wrapper flex flex-col h-[60%] mt-28 gap-24">
+               <div class="header-title hid">
+                  <h1 class="text-5xl font-bold transition-all ease-in"><span class="text-secondary-txt">{ </span>Full Stack<span class="text-secondary-txt"> }</span><span class=" font-normal"> Developer</span></h1>
+                  <h1 class=" text-8xl font-bold transition-all ease-in">JOHN LAPPAY</h1>
+               </div>
+               <div class="contact-me-btn-container w-full flex justify-start items-start flex-grow hid">
+                  <button
+                     class="contact-me-btn flex justify-center items-center gap-2 contact-me-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">
+                     Contact Me <i class='bx bxl-telegram'></i>
+                  </button>
+               </div>
+               <div class="footer-container flex w-full hid">
+                  <div class="soc-med-links flex gap-3 flex-grow">
+                     <div class="soc-med-link">
+                        <a href="https://www.instagram.com/johnlappay/" target="_blank"><i
+                              class='bx bxl-instagram-alt'></i></a>
+                     </div>
+                     <div class="soc-med-link">
+                        <a href="https://www.facebook.com/johnlappay" target="_blank"><i
+                              class='bx bxl-facebook'></i></a>
+                     </div>
+                     <div class="soc-med-link">
+                        <a href="https://www.linkedin.com/in/johnlappay/" target="_blank"><i
+                              class='bx bxl-linkedin'></i></a>
+                     </div>
+                     <div class="soc-med-link">
+                        <a href="https://www.github.com/supremoods" target="_blank"><i class='bx bxl-github'></i></a>
+                     </div>
+                  </div>
+                  <div class="scroll-btn-container">
+                     <button class="scroll-btn flex justify-center items-center group">
+                        <i
+                           class='bx bxs-mouse text-secondary-txt text-[32px] group-hover:text-primary-txt transition-all ease-in'></i>
+                        <span class="group-hover:text-secondary-txt transition-all ease-in">Scroll</span>
+                        <i
+                           class='bx bx-down-arrow-alt text-[32px] text-secondary-txt group-hover:text-primary-txt transition-all ease-in'></i>
+                     </button>
+                  </div>
+               </div>
             </div>
-            <div class="soc-med-links">
-               <div class="soc-med-link">
-                  <a href="https://www.instagram.com/johnlappay/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-               </div>
-               <div class="soc-med-link">
-                  <a href="https://www.facebook.com/johnlappay" target="_blank"><i class='bx bxl-facebook'></i></a>
-               </div>
-               <div class="soc-med-link">
-                  <a href="https://www.linkedin.com/in/johnlappay/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-               </div>
-               <div class="soc-med-link">
-                  <a href="https://www.github.com/johnlappay" target="_blank"><i class='bx bxl-github'></i></a>
-               </div>
+            <div class="dp-container absolute bottom-0 right-0 h-[700px] transition-all ease-in">
+               <img class="object-cover h-full w-full" src="assets/img/prof_comp.png" alt="dp" class="dp">
             </div>
          </div>
       </div>
 
       <!-- about component -->
-      <div class="about-container">
-         <div class="about-wrapper">
-
+      <div class="about-container flex bg-base-violet h-full py-60" id="about">
+         <div class="about-wrapper w-full flex justify-center items-center">
+            <div class="w-3/5 flex flex-col gap-5">
+               <div class="about-title hid">
+                  <h1 class="text-8xl font-bold">About Me</h1>
+               </div>
+               <div class="about-content hid">
+                  <p class="text-lg font-medium w-full">I am a Full Stack Developer from the Philippines. I am currently a 4th
+                     year student at the Technological University of the Philippines taking up Bachelor of Science in
+                     Information Technology. I am a self-taught developer who is passionate about learning new
+                     technologies and creating new things. I am currently accepting freelance project.</p>
+               </div>
+               <div class="read-more-btn hid">
+                  <button
+                     class="flex justify-center items-center gap-2 read-more-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">
+                     Read More <i class='bx bxs-right-arrow-alt'></i>
+                  </button>
+               </div>
+            </div>
          </div>
       </div>
 
+      <!-- recent projects components-->
+      <div class="rec-projects-container h-full bg-base-color">
+         <div class="rec-projects-wrapper w-full flex justify-center items-cenetr py-32">
+            <div class="rec-projects w-3/5 flex flex-col gap-[10em] h-full">
+               <div class="header-container flex items-center w-full flex-wrap gap-10 hid">
+                  <div class="rec-projects-title flex-grow ">
+                     <h1 class="text-8xl font-bold">Recent Projects</h1>
+                  </div>
+                  <div class="view-more-btn">
+                     <button class="flex justify-center items-center gap-2 view-more-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">View More <i class='bx bxs-right-arrow-alt'></i>
+                     </button>
+                  </div>
+               </div>
+
+               <div class="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
+                  <a href="#" class="w-full block col-span-3 shadow-2xl hid">
+                     <div class="cards relative overflow-hidden">
+                        <div class="w-full flex justify-end">
+                           <img src="assets/img/dorys.png" alt="portfolio" class="w-[70%] rec-proj transform hover:scale-125 transition duration-2000 ease-out">
+                        </div>
+                        <h1 class="proj-title">Dory's Online Reservation System</h1>
+                        <h1 class="proj-num ">01</h1>
+                     </div>
+                  </a>
+                  <a href="#" target="_blank" class="w-full block col-span-3  sm:col-span-2 shadow-2xl hid">
+                     <div class="cards relative overflow-hidden">
+                        <div class="w-full flex justify-end">
+                           <img src="assets/img/abyss.png" alt="portfolio" class="w-[70%] rec-proj transform hover:scale-125 transition duration-2000 ease-out">
+                        </div>
+                        <h1 class="proj-title"> Abyss </h1>
+                        <h1 class="proj-num">02</h1>
+                     </div>
+                  </a>
+                  <a href="#" target="_blank" class="w-full block col-span-3 sm:col-span-1  object-cover hid">
+                     <div class="cards relative overflow-hidden shadow-2xl">
+                        <div class="w-full flex justify-end">
+                           <img src="assets/img/evs.png" alt="portfolio" class="w-[70%] rec-proj transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl">
+                        </div>
+                        <h1 class="proj-title absolute top-10 left-10 text-gray-50 font-bold text-xl bg-black rounded-md px-2"> EVS - Online Voting System</h1>
+                        <h1 class="proj-num absolute bottom-10 left-10 text-gray-50 font-bold text-xl">03</h1>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer components-->
+      <div class="footer-container-b h-full flex justify-center">
+        <div class="footer-wrapper-b flex w-3/5 h-[20vh] border-t border-primary-txt pt-10">
+            <div class="logo-link flex-grow">
+               <div class="logo">
+                  <img src="assets/icons/logo.ico" alt="logo" class="logo-img">
+               </div>
+            </div>
+            <div class="soc-med-links flex gap-3">
+               <div class="soc-med-link">
+                  <a href="https://www.instagram.com/johnlappay/" target="_blank"><i
+                        class='bx bxl-instagram-alt'></i></a>
+               </div>
+               <div class="soc-med-link">
+                  <a href="https://www.facebook.com/johnlappay" target="_blank"><i
+                        class='bx bxl-facebook'></i></a>
+               </div>
+               <div class="soc-med-link">
+                  <a href="https://www.linkedin.com/in/johnlappay/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+               </div>
+               <div class="soc-med-link">
+                  <a href="https://www.github.com/johnlappay" target="_blank"><i class='bx bxl-github'></i></a>
+               </div>
+            </div>
+        </div>
+      </div>
    </div>
+
+   <script src="dist/js/app.js"></script>
+   <script src="dist/js/navbar.js"></script>
 </body>
 
 </html>

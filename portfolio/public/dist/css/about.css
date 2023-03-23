@@ -1,0 +1,46 @@
+.cover-container{
+   background: url(../../assets/img/backround.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   height: 40vh;
+   transition: all 0.3s ease-in-out;
+}
+
+.tech-item{
+   display: flex;
+   justify-content: center;
+}
+
+.tech-img-cont{
+   height: 100px;
+   width: 100px;
+   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+}
+
+.tech-img-cont:hover{
+   transform: scale(1.1);
+}
+
+.tech-item img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   transition: all 0.3s ease-in-out;
+}
+
+
+.hid{
+   opacity: 0;
+   filter: blur(10px);
+   transform: translatey(100%);
+   transition: all 0.5s ease-in-out;
+}
+
+.show{
+   opacity: 1;
+   filter: blur(0px);
+   transform: translateX(0);
+}

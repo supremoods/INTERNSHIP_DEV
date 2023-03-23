@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+}
+
 #root{
     @apply bg-base-color flex flex-col text-primary-ligth-txt;
 }
@@ -18,6 +25,29 @@
 }
 
 .navbar-links .navbar-link:hover{
-    @apply text-[white] font-normal ;
+    @apply text-secondary-txt;
+}
+
+
+.soc-med-link{
+    @apply text-3xl hover:text-secondary-txt ;
+    transition: all 0.3s ease-in-out;
+}
+
+.proj-title{
+    @apply absolute top-10 left-10 text-gray-50 font-bold text-xl bg-black rounded-md px-2;
+}
+
+.proj-num{
+    @apply absolute bottom-10 left-10 text-gray-50 font-bold text-xl;
+}
+
+
+.cover-wrapper{
+    @apply h-[calc(100%+20vh)] transition-all ease-in duration-300;
+}
+
+.cover-wrapper.active{
+    @apply h-[70%];
 }
 

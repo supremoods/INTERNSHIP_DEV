@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="dist/css/navbar-foot.css" />
+    <link rel="stylesheet" href="dist/css/contact.css" />
+    <link rel="icon" href="assets/icons/logo.ico" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- navbar component -->
+      <div
+        class="navbar-container fixed flex h-[70px] w-full justify-center items-center pt-[70px] z-10"
+      >
+        <div class="navbar-wrapper flex justify-center items-center w-full">
+          <div class="navbar flex justify-center items-center w-3/5">
+            <div class="navbar-logo flex-grow">
+              <!-- logo img  -->
+              <div class="logo">
+                <img src="assets/icons/logo.ico" alt="logo" class="logo-img" />
+              </div>
+            </div>
+            <div class="menu-btn-container hidden">
+              <div class="menu-btn hover:text-secondary-txt">
+                <i class="bx bx-menu"></i>
+              </div>
+            </div>
+            <div class="navbar-links flex">
+              <!-- nav links -->
+              <div class="back-btn-container hidden">
+                <button class="back-btn hover:text-secondary-txt">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+
+              <div class="cont flex gap-5">
+                <div class="navbar-link">
+                  <a href="about.html">About</a>
+                </div>
+                <div class="navbar-link">
+                  <a href="projects.html">Projects</a>
+                </div>
+                <div class="navbar-link">
+                  <a href="contact.html">Contact</a>
+                </div>
+              </div>
+
+              <!-- social media links -->
+              <div class="soc-med-links">
+                <div class="soc-med-link">
+                  <a
+                    href="https://www.instagram.com/johnlappay/"
+                    target="_blank"
+                    ><i class="bx bxl-instagram-alt"></i
+                  ></a>
+                </div>
+                <div class="soc-med-link">
+                  <a href="https://www.facebook.com/johnlappay" target="_blank"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                </div>
+                <div class="soc-med-link">
+                  <a
+                    href="https://www.linkedin.com/in/johnlappay/"
+                    target="_blank"
+                    ><i class="bx bxl-linkedin"></i
+                  ></a>
+                </div>
+                <div class="soc-med-link">
+                  <a href="https://www.github.com/johnlappay" target="_blank"
+                    ><i class="bx bxl-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- cover component -->
+      <div class="cover-container pt-[70px] h-full flex justify-center"></div>
+
+      <!-- about component -->
+      <div class="contact-container flex bg-base h-full" id="about">
+        <div class="contact-wrapper w-full flex justify-center h-[80vh]">
+          <div class="w-3/5 flex flex-col gap-10 relative">
+            <div class="header-title absolute top-[-4rem] hid">
+              <h1 class="text-8xl font-bold text-primary-txt">Contact</h1>
+            </div>
+            <div class="contact-content pt-20 pb-44 flex gap-10 flex-col">
+              <h1 class="text-black dark:text-gray-50 font-semibold text-2xl">
+                Get in touch, let's talk.
+              </h1>
+              <p class="text-black text-base dark:text-gray-200 mt-2"> Feel free to send me an
+                <a href="mailto:lappay.john@gmail.com" class="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300">email</a>
+                or schedule a <a href="https://calendly.com/lappay-john/consultation" target="_blank" class="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300">free consultation</a>
+                with me.
+              </p>
+              <p class="mt-10">lappay.john@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer components-->
+      <div class="footer-container-b h-full flex justify-center">
+        <div
+          class="footer-wrapper-b flex w-3/5 h-[20vh] border-t border-primary-txt pt-10"
+        >
+          <div class="logo-link flex-grow">
+            <div class="logo">
+              <img src="assets/icons/logo.ico" alt="logo" class="logo-img" />
+            </div>
+          </div>
+          <div class="soc-med-links flex gap-3">
+            <div class="soc-med-link">
+              <a href="https://www.instagram.com/johnlappay/" target="_blank"
+                ><i class="bx bxl-instagram-alt"></i
+              ></a>
+            </div>
+            <div class="soc-med-link">
+              <a href="https://www.facebook.com/johnlappay" target="_blank"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+            </div>
+            <div class="soc-med-link">
+              <a href="https://www.linkedin.com/in/johnlappay/" target="_blank"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+            </div>
+            <div class="soc-med-link">
+              <a href="https://www.github.com/johnlappay" target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dist/js/navbar.js"></script>
+  </body>
+</html>

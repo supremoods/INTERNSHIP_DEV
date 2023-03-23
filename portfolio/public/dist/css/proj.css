@@ -1,0 +1,27 @@
+.cover-container{
+   background: url(../../assets/img/backround.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   height: 40vh;
+   transition: all 0.3s ease-in-out;
+}
+
+
+.hid{
+   opacity: 0;
+   filter: blur(10px);
+   transform: translateX(-100%);
+   transition: all 0.5s ease-in-out;
+}
+
+.show{
+   opacity: 1;
+   filter: blur(0px);
+   transform: translateX(0);
+}
+
+.cards{
+   background: linear-gradient(0deg, transparent 0%, #7319d963 100%);
+}
