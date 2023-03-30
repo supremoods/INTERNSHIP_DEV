@@ -7,3 +7,15 @@
    height: 40vh;
    transition: all 0.3s ease-in-out;
 }
+
+
+/* media query for recent section */
+@media screen and (max-width: 560px){
+   .contact-container .header-title  h1{
+       font-size: 4rem;
+   }
+   .contact-container .header-title {
+      top: -2.5rem;
+   }
+
+}

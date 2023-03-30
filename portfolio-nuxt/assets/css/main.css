@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'League Spartan', sans-serif;
+   scroll-behavior: smooth;
+}
+
+
+.navbar-links{
+   @apply gap-10;
+}
+
+.navbar-links .navbar-link{
+   @apply text-base font-bold;
+   transition: all 0.3s ease-in-out;
+}
+
+.navbar-links .navbar-link:hover{
+   @apply text-secondary-txt;
+}
+
+
+.soc-med-link{
+   @apply text-3xl hover:text-secondary-txt ;
+   transition: all 0.3s ease-in-out;
+}
+
+.proj-title{
+   @apply absolute top-10 left-10 text-gray-50 font-bold text-xl bg-black rounded-md px-2;
+}
+
+.proj-num{
+   @apply absolute bottom-10 left-10 text-gray-50 font-bold text-xl;
+}
+
+
+.cover-wrapper{
+   @apply h-[calc(100%+20vh)] transition-all ease-in duration-300;
+}
+
+.cover-wrapper.active{
+   @apply h-[70%];
+}
+
+
+.navbar-links{
+   transition: all 0.3s ease-in-out;
+}
+
+.navbar-wrapper{
+   transition: all 0.3s ease-in-out;
+}
+
+.navbar-links .soc-med-links{
+   display: none;
+}
+
+.navbar-container.active{
+   padding-top: 0;
+}
+
+.navbar-wrapper.active{
+   background: #7219D9;
+   height: 70px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+
+/* --------------------------------- media query for navbar -------------------------------------- */
+
+@media screen and (max-width: 800px){
+   .menu-btn-container {
+       display: flex;
+
+   }
+
+   .menu-btn{
+       transition: all 0.3s ease-in-out;
+   }
+
+   .menu-btn i{
+       font-size: 2rem;
+       cursor: pointer;
+   }
+
+   .navbar-links{
+       position: fixed;
+       top: 0;
+       right: 0;
+       display: flex;
+       flex-direction: column;
+       height: 100vh;
+       width: 0;
+       overflow: hidden;
+       background: #7219D9;
+       transition: all 0.3s ease-in-out;
+   }
+
+   .navbar-links.active{
+       width: 50%;
+   }
+
+   .navbar-links .cont{
+       flex-direction: column;
+       flex-grow: 1;
+       padding-left:2rem;
+       gap:2rem;
+       margin-top: 3rem;
+   }
+   
+   .navbar-link a{
+       font-size: 32px;
+       font-weight: bold;
+   }
+
+   .navbar-links .soc-med-links{
+       display: flex;
+       padding-left: 2rem;
+       padding-bottom: 2rem;
+       gap:1rem;
+       flex-direction: column;
+   }
+
+   .back-btn-container{
+       display: flex;
+       position: relative;
+   }
+   
+   .back-btn-container .back-btn{
+       transition: all 0.3s ease-in-out;
+   }
+   .back-btn-container .back-btn i{
+       font-size: 4rem;
+   }
+
+}
+
+/* media query for footer-section section */
+@media screen and (max-width: 560px){
+   .footer-container-b .soc-med-links .soc-med-link{
+       font-size: 2rem;
+   }
+
+   .footer-wrapper-b {
+       height: 40vh;
+       flex-direction: column;
+       gap: 2rem;
+       width: 80%;
+   }
+
+   .footer-wrapper-b .logo-link{
+       flex-grow: 0;
+   }
+}
+
+/* media query for navbar section */
+@media screen and (max-width: 560px){
+   .navbar-container .navbar{
+       width: 80%;
+   }
+}

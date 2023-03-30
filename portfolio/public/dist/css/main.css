@@ -152,9 +152,7 @@
         font-size: 2.5rem;
         
     }
-    .dp-container{
-        height: 450px;
-    } 
+
 
 }
 
@@ -178,6 +176,9 @@
     .cover-wrapper {
         width: 80%;
     }
+    .dp-container{
+        height: 400px;
+    } 
 }
 
 /* media query for about section */

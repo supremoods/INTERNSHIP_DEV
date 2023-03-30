@@ -25,3 +25,15 @@
 .cards{
    background: linear-gradient(0deg, transparent 0%, #7319d963 100%);
 }
+
+/* media query for recent section */
+@media screen and (max-width: 560px){
+   .proj-container .header-title  h1{
+       font-size: 4rem;
+   }
+   
+   .proj-container .header-title {
+      top: -2.5rem;
+   }
+
+}
