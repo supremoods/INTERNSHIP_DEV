@@ -1,16 +1,16 @@
 <template>
-   <div class="cover-container pt-[70px] h-full flex justify-center">
-      <div class="cover-wrapper flex relative w-3/5">
+   <div class="cover-container pt-[70px] h-[80vh] flex justify-center">
+      <div class="cover-wrapper flex relative w-3/5" :class="{'active':shrink}">
          <div class="title-wrapper flex flex-col h-[60%] mt-28 gap-24">
             <div class="header-title hid">
-               <h1 class="text-5xl font-bold transition-all ease-in"><span class="text-secondary-txt">{ </span>Full Stack<span class="text-secondary-txt"> }</span><span class=" font-normal"> Developer</span></h1>
-               <h1 class=" text-8xl font-bold transition-all ease-in">JOHN LAPPAY</h1>
+               <h1 class="title text-5xl font-bold transition-all ease-in"><span class="text-secondary-txt">{ </span>Full Stack<span class="text-secondary-txt"> }</span><span class=" font-normal"> Developer</span></h1>
+               <h1 class="title text-8xl font-bold transition-all ease-in">JOHN LAPPAY</h1>
             </div>
             <div class="contact-me-btn-container w-full flex justify-start items-start flex-grow hid">
-               <button
+               <nuxt-link to="/contact" 
                   class="contact-me-btn flex justify-center items-center gap-2 contact-me-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">
                   Contact Me <i class='bx bxl-telegram'></i>
-               </button>
+               </nuxt-link>
             </div>
             <div class="footer-container flex w-full hid">
                <div class="soc-med-links flex gap-3 flex-grow">
@@ -31,7 +31,7 @@
                   </div>
                </div>
                <div class="scroll-btn-container">
-                  <button class="scroll-btn flex justify-center items-center group">
+                  <button @click="scrollToAbout()" class="scroll-btn flex justify-center items-center group">
                      <i
                         class='bx bxs-mouse text-secondary-txt text-[32px] group-hover:text-primary-txt transition-all ease-in'></i>
                      <span class="group-hover:text-secondary-txt transition-all ease-in">Scroll</span>
@@ -47,3 +47,24 @@
       </div>
    </div>
 </template>
+
+<script>
+export default ({
+   props: {
+      shrink: Boolean
+   },  
+   methods: {
+      scrollToAbout() {
+         const about = document.getElementById('about')
+         about.scrollIntoView({ behavior: 'smooth' })
+      }
+   },   
+   mounted(){
+
+   }
+})
+</script>
+
+
+
+

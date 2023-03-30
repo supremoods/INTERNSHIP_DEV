@@ -8,13 +8,13 @@
                   <h1 class="text-8xl font-bold">Recent Projects</h1>
                </div>
                <div class="view-more-btn">
-                  <button class="flex justify-center items-center gap-2 view-more-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">View More <i class='bx bxs-right-arrow-alt'></i>
-                  </button>
+                  <nuxt-link to="/projects" class="flex justify-center items-center gap-2 view-more-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">View More <i class='bx bxs-right-arrow-alt'></i>
+                  </nuxt-link>
                </div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
-               <a href="#" class="w-full block col-span-3 shadow-2xl hid">
+               <a href="#" target="_blank" class="w-full block col-span-3 shadow-2xl hid">
                   <div class="cards relative overflow-hidden">
                      <div class="w-full flex justify-end">
                         <img src="~/assets/img/dorys.png" alt="portfolio" class="w-[70%] rec-proj transform hover:scale-125 transition duration-2000 ease-out">

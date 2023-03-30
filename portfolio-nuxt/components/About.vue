@@ -1,6 +1,6 @@
 <template>
    <!-- about component -->
-   <div class="about-container flex bg-base-violet h-full py-60" id="about">
+   <div class="about-container flex bg-base-dark h-full py-60" id="about" :class="{'active':shrink}">
       <div class="about-wrapper w-full flex justify-center items-center">
          <div class="w-3/5 flex flex-col gap-5">
             <div class="about-title hid">
@@ -13,12 +13,22 @@
                   technologies and creating new things. I am currently accepting freelance project.</p>
             </div>
             <div class="read-more-btn hid">
-               <button
+               <nuxt-link to="/about"
                   class="flex justify-center items-center gap-2 read-more-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">
                   Read More <i class='bx bxs-right-arrow-alt'></i>
-               </button>
+               </nuxt-link>
             </div>
          </div>
       </div>
    </div>
 </template>
+
+<script>
+export default{
+   props: {
+      shrink: Boolean
+   }
+}
+</script>
+
+

@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         'base-color': '#26222E',
+        'base-color-dark': '#211E32',
         'base-violet-light': '#EDE3F9',
         'base-violet': '#7219D9',
         'primary-txt': '#FFDEDE',

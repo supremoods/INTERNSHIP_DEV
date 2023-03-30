@@ -161,6 +161,17 @@
    }
 }
 
+@media screen and (max-width: 400px){
+
+   .footer-wrapper-b .logo-link{
+       flex-grow: 0;
+   }
+
+   .footer-wrapper-b .soc-med-links{
+       flex-direction: column;
+   }
+}
+
 /* media query for navbar section */
 @media screen and (max-width: 560px){
    .navbar-container .navbar{
