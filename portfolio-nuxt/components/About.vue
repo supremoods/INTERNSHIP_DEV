@@ -12,7 +12,7 @@
                   Information Technology. I am a self-taught developer who is passionate about learning new
                   technologies and creating new things. I am currently accepting freelance project.</p>
             </div>
-            <div class="read-more-btn hid">
+            <div class="flex read-more-btn hid w-full justify-end">
                <nuxt-link to="/about"
                   class="flex justify-center items-center gap-2 read-more-btn bg-secondary-txt cursor-pointer p-2 rounded-md hover:bg-secondary-light-txt transition-all ease-in font-semibold">
                   Read More <i class='bx bxs-right-arrow-alt'></i>

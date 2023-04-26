@@ -73,13 +73,10 @@
 }
 
 
-
 /* --------------------------------- media query for navbar -------------------------------------- */
-
 @media screen and (max-width: 800px){
    .menu-btn-container {
        display: flex;
-
    }
 
    .menu-btn{
@@ -162,7 +159,6 @@
 }
 
 @media screen and (max-width: 400px){
-
    .footer-wrapper-b .logo-link{
        flex-grow: 0;
    }

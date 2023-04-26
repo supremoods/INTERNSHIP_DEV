@@ -7,8 +7,8 @@
                     <h1 class="bg-base-violet text-[20px] p-2 rounded-md font-bold">Technology Stack</h1>
                     </div>
                     <div class="tech-list grid grid-cols-4 hid">
-                        <div class="tech-item" v-for="techStack in techStacks">
-                            <div class="tech-img-cont ">
+                        <div class="tech-item" v-for="(techStack,index) in techStacks" :key="index">
+                            <div class="tech-img-cont " :data-id="index">
                                 <img :src="require(`~/assets/tech-stack-ico/${techStack.img}`)" alt="tech-stack" class="tech-img">
                             </div> 
                         </div>
