@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
-import 'package:dio/dio.dart';
+import '../models/Interests.dart';
 
 class CardBottom extends StatefulWidget {
   const CardBottom({super.key});
@@ -10,29 +10,14 @@ class CardBottom extends StatefulWidget {
 }
 
 class _CardBottomState extends State<CardBottom> {
-  List<dynamic> _notifications = [];
-
-  final Dio _dio = Dio();
-
-  Future<void> _fetchNotifications() async {
-    try {
-      final response =
-          await _dio.get('https://jsonplaceholder.typicode.com/posts');
-      if (response.statusCode == 200) {
-        setState(() {
-          _notifications = response.data;
-        });
-      }
-    } catch (e) {
-      print(e);
-    }
-  }
+  final interests = Interests.interests();
+  List<Interests> _foundInterests = [];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: lightColor,
+          color: black_100,
           boxShadow: [
             BoxShadow(
               color: darkColor.withOpacity(0.5),
@@ -52,90 +37,56 @@ class _CardBottomState extends State<CardBottom> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'John Lappay',
+                            'John Lappay, 21',
                             style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 32,
                                 fontWeight: FontWeight.bold,
-                                color: primaryColor),
+                                color: gray_500),
                           ),
-                          // add notification button
-                          GestureDetector(
-                            onTap: () async {
-                              await _fetchNotifications();
-
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    title: Text('Notifications'),
-                                    content: Container(
-                                      width: double.maxFinite,
-                                      child: ListView.builder(
-                                        itemCount: _notifications.length,
-                                        itemBuilder:
-                                            (BuildContext context, int index) {
-                                          return ListTile(
-                                            leading: Icon(
-                                                Icons.notification_important),
-                                            title: Text(
-                                                _notifications[index]['title']),
-                                          );
-                                        },
-                                      ),
-                                    ),
-                                    actions: [
-                                      TextButton(
-                                        onPressed: () => Navigator.pop(context),
-                                        child: Text('Close'),
-                                      ),
-                                    ],
-                                  );
-                                },
-                              );
-                            },
-                            child: Container(
-                              margin: EdgeInsets.only(left: 10),
-                              padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: darkColor.withOpacity(0.6),
-                                    spreadRadius: 1,
-                                    blurRadius: 2,
-                                    offset: Offset(0, 3),
-                                  ),
-                                ],
-                                color: lightColor,
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              child: Icon(
-                                Icons.notifications,
-                                color: primaryColor,
-                              ),
-                            ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Freelance Developer',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.normal,
+                                color: gray_200),
                           ),
                         ]),
                   ),
                   // add gap
                   SizedBox(height: 10),
-                  Text(
-                    'Software Developer',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: darkColor.withOpacity(0.7)),
-                  ),
                   Container(
                     margin: EdgeInsets.only(top: 20),
                     child: Text(
-                      'I am a fourth-year Information Technology student at the Technological University of the Philippines, and I am currently working as a Software Developer Intern at Centralized Cloud Computing International.',
-                      style: TextStyle(fontSize: 15, color: darkColor),
+                      'My Interests',
+                      style: TextStyle(
+                          fontSize: 24,
+                          color: gray_300,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
+                  Container(
+                    child:
+                        // make it flex wrap
+                        Wrap(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(right: 10, top: 10),
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: lightColor,
+                              borderRadius: BorderRadius.circular(10)),
+                            // loop through the interests
+
+
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               )),
           Container(
