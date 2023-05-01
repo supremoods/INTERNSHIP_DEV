@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import 'package:boxicons/boxicons.dart';
+import '../widgets/Sidebar.dart';
 
 class HeaderBar extends StatefulWidget {
-  const HeaderBar({super.key});
+  final ValueChanged<bool> onSidebarChanged;
+
+  const HeaderBar({required this.onSidebarChanged});  
 
   @override
   State<HeaderBar> createState() => _HeaderBarState();
 }
 class _HeaderBarState extends State<HeaderBar> {
+  // add state for sidebar
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +26,7 @@ class _HeaderBarState extends State<HeaderBar> {
             leading: GestureDetector(
                 onTap: () {
                   setState(() {
-     
+                    widget.onSidebarChanged(true);
                   });
                 },
                 child: Container(

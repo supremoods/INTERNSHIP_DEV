@@ -79,7 +79,10 @@ flutter:
   assets:
     - assets/
     - assets/images/profile.jpg
+    - assets/images/about.png
     - assets/icons/logo_500.png
+    - assets/images/projects.png
+    - assets/images/internship.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

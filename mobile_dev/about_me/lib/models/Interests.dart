@@ -15,8 +15,7 @@ class Interests {
       Interests(name: '🖌 Drawing'),
       Interests(name: '📸 Photography'),
       Interests(name: '🏛 Museum'),
-      Interests(name: '🧳 Travel'),
-      Interests(name: '🎨 Design')
+      Interests(name: '🧳 Travel')
     ];
   }
 }

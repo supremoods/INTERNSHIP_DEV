@@ -14,10 +14,16 @@ class _CardBottomState extends State<CardBottom> {
   List<Interests> _foundInterests = [];
 
   @override
+  void initState() {
+    _foundInterests = interests;
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: black_100,
+          color: black,
           boxShadow: [
             BoxShadow(
               color: darkColor.withOpacity(0.5),
@@ -32,11 +38,15 @@ class _CardBottomState extends State<CardBottom> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              padding: EdgeInsets.all(40),
+              padding: EdgeInsets.only(top: 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
+                    padding: EdgeInsets.only(
+                      left: 30,
+                      right: 30,
+                    ),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -47,7 +57,7 @@ class _CardBottomState extends State<CardBottom> {
                                 fontWeight: FontWeight.bold,
                                 color: gray_500),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 5),
                           Text(
                             'Freelance Developer',
                             style: TextStyle(
@@ -58,85 +68,253 @@ class _CardBottomState extends State<CardBottom> {
                         ]),
                   ),
                   // add gap
-                  SizedBox(height: 10),
+                  SizedBox(height: 25),
+                  // make the container sc
                   Container(
-                    margin: EdgeInsets.only(top: 20),
-                    child: Text(
-                      'My Interests',
-                      style: TextStyle(
-                          fontSize: 24,
-                          color: gray_300,
-                          fontWeight: FontWeight.bold),
+                    // make the container scrollable vertical
+                    height: 300,
+
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(
+                                left: 30,
+                                right: 30,
+                              ),
+                              child: Text(
+                                'My Interests',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: gray_300,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(
+                                left: 30,
+                                right: 30,
+                              ),
+                              child:
+                                  // make it flex wrap
+                                  Wrap(
+                                children: [
+                                  ...(_foundInterests.length > 0
+                                          ? _foundInterests
+                                          : interests)
+                                      .map(
+                                        (interest) => Container(
+                                          margin: EdgeInsets.only(
+                                              top: 10, right: 10),
+                                          padding: EdgeInsets.only(
+                                              top: 10,
+                                              bottom: 10,
+                                              left: 15,
+                                              right: 15),
+                                          decoration: BoxDecoration(
+                                            color: lightColor,
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          child: Text(
+                                            interest.name,
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              color: darkColor,
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                      .toList(),
+                                ],
+                              ),
+                            ),
+                            // add gap
+                            SizedBox(height: 25),
+                            Container(
+                                // list view cards horizontal
+                                padding: EdgeInsets.only(
+                                  left: 30,
+                                ),
+                                height: 250,
+                                child: ListView(
+                                    scrollDirection: Axis.horizontal,
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.only(
+                                          top: 10,
+                                          right: 10,
+                                        ),
+                                        
+                                        width: 200,
+                                        decoration: BoxDecoration(
+                                          color: black_100,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              padding: EdgeInsets.only(
+                                                  left: 20, right: 20,
+                                                  top: 20,
+                                              ),
+                                              child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                        'About',
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight: FontWeight.bold,
+                                                          color: gray_300,
+                                                        )),
+                                                  ]),
+                                            ),
+                                            Container(
+                                              height: 150,
+                                              margin: EdgeInsets.only(
+                                                          left: 20, right: 20,
+                                                  top: 20,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10)
+                                                ),
+                                                image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/images/about.png'),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                         Container(
+                                        margin: EdgeInsets.only(
+                                          top: 10,
+                                          right: 10,
+                                        ),
+                                        
+                                        width: 200,
+                                        decoration: BoxDecoration(
+                                          color: black_100,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                             Container(
+                                              padding: EdgeInsets.only(
+                                                  left: 20, right: 20,
+                                                  top: 20,
+                                              ),
+                                              child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                        'Projects',
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight: FontWeight.bold,
+                                                          color: gray_300,
+                                                        )),
+                                                  ]),
+                                            ),
+                                            Container(
+                                              height: 150,
+                                              margin: EdgeInsets.only(
+                                                  left: 20, right: 20,
+                                                  top: 20,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10)
+                                                ),
+                                                image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/images/projects.png'),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                       Container(
+                                        margin: EdgeInsets.only(
+                                          top: 10,
+                                          right: 10,
+                                        ),
+                                        
+                                        width: 200,
+                                        decoration: BoxDecoration(
+                                          color: black_100,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                             Container(
+                                              padding: EdgeInsets.only(
+                                                  left: 20, right: 20,
+                                                  top: 20,
+                                              ),
+                                              child: Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                        'Internship',
+                                                        style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight: FontWeight.bold,
+                                                          color: gray_300,
+                                                        )),
+                                                  ]),
+                                            ),
+                                            Container(
+                                              height: 150,
+                                              margin: EdgeInsets.only(
+                                                  left: 20, right: 20,
+                                                  top: 20,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10)
+                                                ),
+                                                image: DecorationImage(
+                                                  image: AssetImage(
+                                                      'assets/images/internship.png'),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ])),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                  Container(
-                    child:
-                        // make it flex wrap
-                        Wrap(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(right: 10, top: 10),
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              color: lightColor,
-                              borderRadius: BorderRadius.circular(10)),
-                            // loop through the interests
-
-
-                        ),
-                      ],
-                    ),
-                  )
                 ],
               )),
-          Container(
-            margin: EdgeInsets.only(top: 20),
-            child: Text(
-              'Skills',
-              style: TextStyle(
-                  fontSize: 20, fontWeight: FontWeight.bold, color: darkColor),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 20),
-            child: Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(right: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      color: lightColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Text(
-                    'Flutter',
-                    style: TextStyle(fontSize: 15, color: darkColor),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(right: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      color: lightColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Text(
-                    'Dart',
-                    style: TextStyle(fontSize: 15, color: darkColor),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(right: 10),
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      color: primaryColor,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Text(
-                    'Java',
-                    style: TextStyle(fontSize: 15, color: lightColor),
-                  ),
-                ),
-              ],
-            ),
-          ),
         ],
       ),
     );
