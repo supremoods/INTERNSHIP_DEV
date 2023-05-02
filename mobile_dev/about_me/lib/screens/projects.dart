@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/headerBar.dart';
 import '../widgets/Sidebar.dart';
-import '../widgets/home/cardBottom.dart';
+import '../widgets/projects/cardBottom.dart';
 
 class Projects extends StatefulWidget {
   const Projects({super.key});
@@ -36,7 +36,7 @@ class _ProjectsState extends State<Projects> {
               height: MediaQuery.of(context).size.height * 0.80,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/profile.jpg'),
+                  image: AssetImage('assets/images/projects/dorys.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -46,7 +46,7 @@ class _ProjectsState extends State<Projects> {
         // set container to
         Positioned(
           bottom: 0,
-          height: MediaQuery.of(context).size.height * 0.50,
+          height: MediaQuery.of(context).size.height * 0.60,
           width: MediaQuery.of(context).size.width,
           child: CardBottom(),
         ),

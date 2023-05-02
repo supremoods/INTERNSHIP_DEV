@@ -119,6 +119,7 @@ class _CardBottomState extends State<CardBottom> {
                 ],
               )),
         ],
+    
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'package:about_me/screens/about.dart';
 import 'package:about_me/screens/home.dart';
+import 'package:about_me/screens/projects.dart';
+import 'package:about_me/screens/internship.dart';
 import 'package:flutter/material.dart';
 import 'package:boxicons/boxicons.dart';
 
@@ -115,6 +117,8 @@ class Sidebar extends StatelessWidget {
                   ),
                   onTap: () {
                     // Navigation code goes here
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Projects()));
                   },
                 ),
                 SizedBox(
