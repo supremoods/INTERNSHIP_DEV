@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import 'package:boxicons/boxicons.dart';
-import '../widgets/Sidebar.dart';
 
 class HeaderBar extends StatefulWidget {
   final ValueChanged<bool> onSidebarChanged;

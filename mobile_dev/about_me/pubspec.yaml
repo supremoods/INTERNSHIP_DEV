@@ -79,10 +79,23 @@ flutter:
   assets:
     - assets/
     - assets/images/profile.jpg
+    - assets/images/aboutProfile.jpg
     - assets/images/about.png
     - assets/icons/logo_500.png
     - assets/images/projects.png
     - assets/images/internship.png
+    - assets/images/techStackico/android.png
+    - assets/images/techStackico/css.png
+    - assets/images/techStackico/firebase.png
+    - assets/images/techStackico/git.png
+    - assets/images/techStackico/html5.png
+    - assets/images/techStackico/js.png
+    - assets/images/techStackico/mongodb.png
+    - assets/images/techStackico/mysql.png
+    - assets/images/techStackico/nodejs.png
+    - assets/images/techStackico/php.png
+    - assets/images/techStackico/python.png
+    - assets/images/techStackico/reactjs.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

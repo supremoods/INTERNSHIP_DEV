@@ -1,17 +1,16 @@
-
 import 'package:flutter/material.dart';
-import '../widgets/home/cardBottom.dart';
 import '../widgets/headerBar.dart';
 import '../widgets/Sidebar.dart';
+import '../widgets/home/cardBottom.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Projects extends StatefulWidget {
+  const Projects({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Projects> createState() => _ProjectsState();
 }
 
-class _HomeState extends State<Home> {
+class _ProjectsState extends State<Projects> {
   // add state from sidebar
   bool isCollapsed = false;
 
@@ -26,7 +25,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+    body: Stack(
       children: [
         Container(
           height: MediaQuery.of(context).size.height,

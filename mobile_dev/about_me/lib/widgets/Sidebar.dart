@@ -1,5 +1,7 @@
+import 'package:about_me/screens/about.dart';
+import 'package:about_me/screens/home.dart';
 import 'package:flutter/material.dart';
-import '../constants/colors.dart';
+import 'package:boxicons/boxicons.dart';
 
 class Sidebar extends StatelessWidget {
   final ValueChanged<bool> onSidebarChanged;
@@ -27,7 +29,6 @@ class Sidebar extends StatelessWidget {
           ),
         ],
         image: DecorationImage(
-          
           image: AssetImage('assets/images/profile.jpg'),
           fit: BoxFit.cover,
           // add filter to bg image make it darker and blur
@@ -35,8 +36,6 @@ class Sidebar extends StatelessWidget {
             Colors.black.withOpacity(0.8),
             BlendMode.darken,
           ),
-          
-          
         ),
       ),
       child: Column(
@@ -54,17 +53,106 @@ class Sidebar extends StatelessWidget {
                 onSidebarChanged(false);
               },
               icon: Icon(
-                Icons.arrow_back_ios,
+                Boxicons.bx_arrow_back,
                 color: Colors.white,
               ),
             ),
-            
           ),
           SizedBox(
             height: 30,
           ),
-
-                 ],
+          // add navigation menu for about, projects, internship and others
+          // add also onpressed to navigate to other page
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                InkWell(
+                  child: Text(
+                    'Home',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onTap: () {
+                    // Navigation code goes here
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  },
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                InkWell(
+                  child: Text(
+                    'About',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onTap: () {
+                    // Navigation code goes here
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => About()));
+                  },
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                InkWell(
+                  child: Text(
+                    'Projects',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onTap: () {
+                    // Navigation code goes here
+                  },
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                InkWell(
+                  child: Text(
+                    'Internship',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onTap: () {
+                    // Navigation code goes here
+                  },
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                InkWell(
+                  child: Text(
+                    'Others',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onTap: () {
+                    // Navigation code goes here
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
